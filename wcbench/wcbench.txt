@@ -1,0 +1,27 @@
+# Params for CBench test and ODL config
+NUM_SWITCHES=10  # Default number of switches for CBench to simulate
+NUM_MACS=10  # Default number of MACs for CBench to use
+TESTS_PER_SWITCH=10  # Default number of CBench tests to do per CBench run
+MS_PER_TEST=10000  # Default milliseconds to run each CBench test
+CBENCH_WARMUP=1  # Default number of warmup cycles to run CBench
+OSGI_PORT=2400  # Port that the OSGi console listens for telnet on
+ODL_STARTUP_DELAY=90  # Default time in seconds to give ODL to start
+ODL_RUNNING_STATUS=0  # run.sh gives this status when ODL is running
+ODL_STOPPED_STATUS=255  # run.sh gives this status when ODL is stopped
+ODL_BROKEN_STATUS=1  # run.sh gives this status when things are FUBR
+CONTROLLER="OpenDaylight"  # Currently only support ODL
+CONTROLLER_IP=192.168.2.11  # Change this to remote IP if running on two systems
+CONTROLLER_PORT=6633  # Default port for OpenDaylight
+SSH_HOSTNAME="cbenchc"  # You'll need to update this to reflect ~/.ssh/config
+ 
+# Paths used in this script
+BASE_DIR=$HOME  # Directory that code and such is dropped into
+OF_DIR=$BASE_DIR/openflow  # Directory that contains OpenFlow code
+OFLOPS_DIR=$BASE_DIR/oflops  # Directory that contains oflops repo
+ODL_DIR=$BASE_DIR/opendaylight  # Directory with ODL code
+ODL_ZIP="distributions-base-0.2.0-SNAPSHOT-osgipackage.zip"  # ODL zip name
+ODL_ZIP_PATH=$BASE_DIR/$ODL_ZIP  # Full path to ODL zip
+PLUGIN_DIR=$ODL_DIR/plugins  # ODL plugin directory
+RESULTS_FILE=$BASE_DIR/"results.csv"  # File that results are stored in
+CBENCH_LOG=$BASE_DIR/"cbench.log"  # Log file used to store strange error msgs
+CBENCH_BIN="/usr/local/bin/cbench"  # Path to CBench binary
